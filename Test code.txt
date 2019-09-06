@@ -1,0 +1,81 @@
+Full Adder:
+
+vdd vdd 0 DC 5
+VA A 0 pulse 5 0 0 2n 2n 8u 16u
+VB B 0 pulse 5 0 0 2n 2n 4u 8u
+VCin Cin 0 pulse 5 0 0 2n 2n 2u 4u
+.tran 0 50u
+.include P:\RadhakrD\C5_models.txt
+
+
+
+
+Four Bit Adder:
+
+Case A (Cin is 0):
+
+vdd vdd 0 DC 5
+VCin Cin 0 DC 5
+VA0 A0 0 pulse 5 0 0 2n 2n 256u 512u
+VB0 B0 0 pulse 5 0 0 2n 2n 128u 256u
+VA1 A1 0 pulse 5 0 0 2n 2n 64u 128u
+VB1 B1 0 pulse 5 0 0 2n 2n 32u 64u
+VA2 A2 0 pulse 5 0 0 2n 2n 16u 32u
+VB2 B2 0 pulse 5 0 0 2n 2n 8u 16u
+VA3 A3 0 pulse 5 0 0 2n 2n 4u 8u
+VB3 B3 0 pulse 5 0 0 2n 2n 2u 4u
+.tran 0 600u
+.include P:\RadhakrD\C5_models.txt
+
+
+
+
+Case B (Cin is 1):
+
+vdd vdd 0 DC 5
+VCin Cin 0 DC 5
+VA0 A0 0 pulse 5 0 0 2n 2n 256u 512u
+VB0 B0 0 pulse 5 0 0 2n 2n 128u 256u
+VA1 A1 0 pulse 5 0 0 2n 2n 64u 128u
+VB1 B1 0 pulse 5 0 0 2n 2n 32u 64u
+VA2 A2 0 pulse 5 0 0 2n 2n 16u 32u
+VB2 B2 0 pulse 5 0 0 2n 2n 8u 16u
+VA3 A3 0 pulse 5 0 0 2n 2n 4u 8u
+VB3 B3 0 pulse 5 0 0 2n 2n 2u 4u
+.tran 0 600u
+.include P:\RadhakrD\C5_models.txt
+
+
+
+Case C (Check Cout C2, C1, C0)
+
+vdd vdd 0 DC 5
+VCin Cin 0 pulse 5 0 0 2n 2n 512u 1024u
+VA0 A0 0 pulse 5 0 0 2n 2n 258u 512u
+VB0 B0 0 pulse 5 0 0 2n 2n 128u 256u
+VA1 A1 0 pulse 5 0 0 2n 2n 64u 128u
+VB1 B1 0 pulse 5 0 0 2n 2n 32u 64u
+VA2 A2 0 pulse 5 0 0 2n 2n 16u 32u
+VB2 B2 0 pulse 5 0 0 2n 2n 8u 16u
+VA3 A3 0 pulse 5 0 0 2n 2n 4u 8u
+VB3 B3 0 pulse 5 0 0 2n 2n 2u 4u
+.tran 0 600u
+.include P:\RadhakrD\C5_models.txt
+
+
+
+
+Four Bit Adder / Subtractor:
+
+vdd vdd 0 DC 5
+vA0 A0 0 DC 5
+vA1 A1 0 DC 5
+vA2 A2 0 DC 5
+vA3 A3 0 DC 5
+vB0 B0 0 DC 5
+vB1 B1 0 DC 5
+vB2 B2 0 DC 5
+vB3 B3 0 DC 5
+vS Sub 0 pulse (0 5 0 .01ns .01ns 20ns 40ns)
+.tran 0 100n
+.include P:\RadhakrD\C5_models.txt
